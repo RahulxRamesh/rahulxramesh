@@ -1,2 +1,0 @@
-# rahulxramesh.com
-personal website
