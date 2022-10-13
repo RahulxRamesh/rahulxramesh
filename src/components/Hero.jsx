@@ -23,9 +23,9 @@ const Hero = () => {
               
               <span className="text-gradient">Rahul Ramesh</span>{" "}
               </h1>
-              <div className='ss:flex hidden md:mr-2 mr-0'>
+             {/* <div className='ss:flex hidden md:mr-2 mr-0'>
                 <GetStarted/>
-              </div>
+  </div>*/}
             </div>
 
             <h1 className='font-poppins font-semibold ss:text-[60px] text-[60px] text-white ss:leading-[50px] leading-[55px] w-full'>
@@ -47,9 +47,9 @@ const Hero = () => {
           </div>
 
 
-              <div className={`ss:hidden ${styles.flexCenter}`}>
+             {/* <div className={`ss:hidden ${styles.flexCenter}`}>
                     <GetStarted/>
-               </div>
+</div>*/}
 
       </section>
 
