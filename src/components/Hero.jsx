@@ -33,7 +33,7 @@ const Hero = () => {
             </h1>
             <p className={`${styles.paragraph} max-w-[470px] mt-5`}>
               B.S. in Computer Science from the University of Texas at Dallas,
-              Currently working in QA engineer, creating Javascript bots/web projects
+              Currently working in QA engineering, creating Javascript bots/web projects
               & trying to climb rocks better 🤙🏾.
             </p>
           </div>
