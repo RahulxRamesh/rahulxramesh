@@ -1,4 +1,4 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star  } from "../assets";
+import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star, github  } from "../assets";
 
 export const navLinks = [
   {
@@ -10,13 +10,15 @@ export const navLinks = [
     title: "Resume",
   },
   {
-    id: "product",
+    id: "linkedin-link",
     icon: linkedin,
+    link: "https://www.linkedin.com/in/rahulxramesh/",
     
   },
   {
-    id: "clients",
-    title: "Clients",
+    id: "github-link",
+    icon: github,
+    link: "https://github.com/RahulxRamesh",
   },
 ];
 

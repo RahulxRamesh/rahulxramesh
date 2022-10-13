@@ -9,7 +9,7 @@ const [toggle, setToggle] = useState(false);
   return (
     <nav className='w-full flex py-6 justify-between items-center navbar'>
 
-    <img src={logo} alt="hoobank" className='w-[124px] h-[32px]'/>
+    <img src={logo} alt="pineapple-logo" className='w-[124px] h-[32px]'/>
     <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
       {navLinks.map((nav, index)=>(
           <li key={nav.id}
@@ -21,7 +21,8 @@ const [toggle, setToggle] = useState(false);
                 <a href={`#${nav.id}`}>
                   {nav.title}
                 </a>
-                <img src={nav.icon}/>
+                <img src={nav.icon} onClick={() => window.open(nav.link)}/>
+                
 
 
           </li>
