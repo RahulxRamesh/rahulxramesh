@@ -3,11 +3,12 @@ import { people01, people02, people03, facebook, instagram, linkedin, twitter, a
 export const navLinks = [
   {
     id: "projects",
-    title: "Projects",
+    title: "projects",
   },
   {
     id: "resume",
-    title: "Resume",
+    title: "résumé",
+    linkL: "https://github.com/RahulxRamesh/rahulxramesh/blob/main/src/assets/Rahul_Ramesh_Resume_CURRENT.docx.pdf",
   },
   {
     id: "linkedin-link",
