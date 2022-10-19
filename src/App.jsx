@@ -4,14 +4,14 @@ import { Navbar, Billing, CardDeal, Business, Clients, CTA, Stats, Footer, Testi
 
 const App = () => {
   return (
-    <div className='bg-primary w-full overflow-hidden'>
+    <div className='bg-primary w-full h-full overflow-hidden'>
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar/>
         </div>
       </div>
 
-      <div className={`bg-primary ${styles.paddingY2} ${styles.flexStart}`}>
+      <div className={` ${styles.paddingY2} ${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
             <Hero/>
         </div>
