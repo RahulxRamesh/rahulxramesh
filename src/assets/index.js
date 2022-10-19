@@ -7,6 +7,7 @@ import dropbox from "./dropbox.png";
 import quotes from "./quotes.svg";
 import pfp from "./pfp.png";
 import send from "./Send.svg";
+import loading from "./loading.svg"
 import shield from "./Shield.svg";
 import star from "./Star.svg";
 import menu from "./menu.svg";
@@ -38,6 +39,7 @@ export {
   star,
   menu,
   close,
+  loading,
   google,
   apple,
   arrowUp,
