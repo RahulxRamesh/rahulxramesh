@@ -1,20 +1,21 @@
 import React from 'react'
 import styles from '../style';
 import {pfp, loading} from '../assets';
-import GetStarted from './GetStarted';
 
 const Hero = () => {
   return (
     
+    
       <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-
-          <div className={`flex-1 ${styles.flexStart} flex-col xl:px=0 sm:px-20 px-6`}>
+          <div className={`flex-1 ${styles.flexStart} flex-col xl:px=0 sm:px-0 px-0`}>
 
             <div className='flex flex-row items-center py-[12px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
-              <img src={loading} alt='discount' className='w-[33px] h-[33px] animate-spin'/>
+              
+              {/*<img src={loading} alt='discount' className='w-[33px] h-[33px] animate-spin'/>*/}
               <p className={`${styles.paragraph} ml-4`}>
                 <span className='text-white'>QA</span> Engineer {" "}
-                  <span className='text-white'>in</span> Healthcare
+                  <span className='text-white'>in</span> Healthcare {" "}
+                  <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
               </p>
             </div>
 
@@ -30,7 +31,7 @@ const Hero = () => {
             </h1>
             <p className={`${styles.paragraph} max-w-[470px] mt-8`}>
               B.S. in Computer Science from the University of Texas at Dallas,
-              Creating Javascript bots, web projects, & trying to climb rocks better 🤙🏾.
+              creating Javascript bots, web projects, & trying to climb rocks better 🤙🏾.
             </p>
           </div>
 

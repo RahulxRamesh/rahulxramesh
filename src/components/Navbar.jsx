@@ -13,7 +13,7 @@ const [toggle, setToggle] = useState(false);
       {navLinks.map((nav, index)=>(
           <li key={nav.id}
                className={`font-poppins font-normal
-               cursor-pointer text-[16px] 
+               cursor-pointer text-[16px]  
                ${index === navLinks.length -1 ? 'mr-0' : 'mr-10'} 
                text-white`}>
 
