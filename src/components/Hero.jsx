@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../style';
-import {pfp, loading} from '../assets';
+import {pfp} from '../assets';
 
 const Hero = () => {
   return (
@@ -10,8 +10,6 @@ const Hero = () => {
           <div className={`flex-1 ${styles.flexStart} flex-col xl:px=0 sm:px-0 px-0`}>
 
             <div className='flex flex-row items-center py-[12px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
-              
-              {/*<img src={loading} alt='discount' className='w-[33px] h-[33px] animate-spin'/>*/}
               <p className={`${styles.paragraph} ml-4`}>
                 <span className='text-white'>QA</span> Engineer {" "}
                   <span className='text-white'>in</span> Healthcare {" "}
