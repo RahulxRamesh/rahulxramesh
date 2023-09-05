@@ -11,7 +11,7 @@ const Hero = () => {
 
             <div className='flex flex-row items-center py-[12px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
               <p className={`${styles.paragraph} ml-4`}>
-                <span className='text-white'>QA</span> Engineer {" "}
+                <span className='text-white'>Senior</span>Automation Engineer {" "}
                   <span className='text-white'>in</span> Healthcare {" "}
                   <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
               </p>
