@@ -1,6 +1,7 @@
 {
   "name": "rahul-website-2022",
   "private": true,
+  "homepage": "rahulxramesh.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
