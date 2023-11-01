@@ -9,11 +9,15 @@ const Hero = () => {
       <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
           <div className={`flex-1 ${styles.flexStart} flex-col xl:px=0 sm:px-0 px-0`}>
 
-            <div className='flex flex-row items-center py-[12px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
-              <p className={`${styles.paragraph} ml-4`}>
+            <div className='flex flex-row items-center py-[10px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
+              <p className={`${styles.tagline} ml-4`}>
                 <span className='text-white'>Senior </span>Automation Engineer {" "}
                   <span className='text-white'>in</span> Healthcare {" "}
                   <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                  <br/>
+                  <a href='https://timelycare.com/' >
+                  <span className='text-gradient'>@TimelyCare</span>
+                  </a>
               </p>
             </div>
 
@@ -24,12 +28,12 @@ const Hero = () => {
               </h1>
             </div>
 
-            <h1 className='font-poppins font-semibold ss:text-[60px] text-[60px] text-white ss:leading-[50px] leading-[55px] w-full'>
-                  Texas based, Global minded.
+            <h1 className='font-poppins font-semibold ss:text-[60px] text-[60px] text-white ss:leading-[57px] leading-[55px] w-full'>
+                  Texas based, Global minded. 🌎
             </h1>
             <p className={`${styles.paragraph} max-w-[470px] mt-8`}>
               B.S. in Computer Science from the University of Texas at Dallas,
-              creating Javascript bots, web projects, & trying to climb rocks better 🤙🏾.
+              <span className='text-gradient'> 5+ years</span> creating Javascript bots, web projects, & trying to climb rocks better 🤙🏾.
             </p>
           </div>
 
