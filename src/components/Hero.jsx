@@ -15,7 +15,7 @@ const Hero = () => {
                   <span className='text-white'>in</span> Healthcare {" "}
                   <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
                   <br/>
-                  <a href='https://timelycare.com/' >
+                  <a href='https://timelycare.com/' target="_blank" >
                   <span className='text-gradient'>@TimelyCare</span>
                   </a>
               </p>
