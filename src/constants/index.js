@@ -8,7 +8,7 @@ export const navLinks = [
   {
     id: "resume",
     title: "résumé",
-    link: "https://github.com/RahulxRamesh/rahulxramesh/blob/main/src/assets/Rahul_Ramesh_Resume_CURRENT.docx.pdf",
+    link: "https://github.com/RahulxRamesh/rahulxramesh/blob/main/src/assets/Rahul_Ramesh_Resume_Current",
   },
   {
     id: "linkedin-link",
