@@ -12,7 +12,7 @@ const Hero = () => {
             <div className='flex flex-row items-center py-[10px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
               <p className={`${styles.tagline} ml-4`}>
                   <span className='text-white'>Just an </span> Engineer now. {" "} <br></br>
-                  <span className='text-white'>[previously</span> in Telehealth] {" "}
+                  <span className='text-white'>[previously ➜</span> Telehealth] {" "}
                   <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
               </p>
             </div>
