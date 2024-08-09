@@ -11,9 +11,10 @@ const Hero = () => {
 
             <div className='flex flex-row items-center py-[10px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
               <p className={`${styles.tagline} ml-4`}>
-                  <span className='text-white'>Just an </span> Engineer now. {" "} <br></br>
-                  <span className='text-white'>[previously ➜</span> Telehealth] {" "}
-                  <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                  <span className='text-white'>Automation | QA | Release</span> ~Engineer 
+                  <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span> <br></br>
+                  <span className='text-gradient text-white ss:text-[15px]'>[previously ➜ Telehealth]</span> 
+                  
               </p>
             </div>
 
@@ -24,12 +25,13 @@ const Hero = () => {
               </h1>
             </div>
 
-            <h1 className='font-poppins font-semibold ss:text-[60px] text-[60px] text-white ss:leading-[57px] leading-[55px] w-full'>
-                  Texas based, Global minded. 🌎
+            <h1 className='font-poppins font-semibold ss:text-[50px] text-[60px] text-white ss:leading-[57px] leading-[55px] w-full'>
+                  Texas based <br></br> Global minded🌎
             </h1>
-            <p className={`${styles.paragraph} max-w-[470px] mt-8`}>
-              B.S. in Computer Science from the University of Texas at Dallas,
-              <span className='text-gradient'> 5+ years</span> creating Javascript bots, web projects, & trying to climb rocks better 🤙🏾.
+            <p className={`${styles.paragraph} max-w-[500px] mt-8`}>
+              B.S. in Computer Science - University of Texas at Dallas
+              <span className='text-gradient'> 5+ years</span> creating javascript bots, web projects,
+              <br></br> & trying to climb rocks better🤙🏾
             </p>
           </div>
 
