@@ -17,6 +17,11 @@ const App = () => {
         </div>
       </div>
 
+      <div className={``}>
+        <div className={``}>
+            <Footer/>
+        </div>
+      </div>
 
       </div>
   )
