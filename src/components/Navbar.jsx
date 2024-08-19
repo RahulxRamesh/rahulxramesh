@@ -44,7 +44,7 @@ const [toggle, setToggle] = useState(false);
                                  ${index === navLinks.length -1 ? 'mr-0' : 'mb-4'} 
                                  text-white`}>
 
-                      <a href={`#${nav.id}`}>
+                      <a href={`#${nav.id}`} onClick={() => window.open(nav.link)}>
                           {nav.title}
                        </a>
                        <img src={nav.icon} onClick={() => window.open(nav.link)}/>
