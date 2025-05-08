@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './style'
-import { Navbar, Footer, Hero} from './components';
+import { Navbar, Footer, Hero, Projects} from './components';
 
 const App = () => {
   return (
@@ -14,6 +14,12 @@ const App = () => {
       <div className={`${styles.flexStart}`}>
         <div className={`${styles.boxWidth}`}>
             <Hero/>
+        </div>
+      </div>
+
+      <div className={`${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+            <Projects/>
         </div>
       </div>
 
