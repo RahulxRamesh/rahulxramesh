@@ -13,8 +13,7 @@ const Hero = () => {
               <p className={`${styles.tagline} ml-4`}>
                   <span className='text-white'>Automation | QA | Release</span> ~Engineer 
                   <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span> <br></br>
-                  <span className='text-gradient text-white ss:text-[15px]'>[previously ➜ Telehealth]</span> 
-                  
+                  <span className='text-gradient text-white ss:text-[15px]'>[currently ➜ Telehealth]</span>
               </p>
             </div>
 
