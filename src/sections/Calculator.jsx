@@ -21,6 +21,7 @@ const Calculator = () => {
   };
   
   const [result, setResult] = useState(null);
+  const [protein, setProtein] = useState(null);
   
   const handleSubmit = async (e) => {
     console.log("Form data:", form);
@@ -32,23 +33,24 @@ const Calculator = () => {
       const weight = parseFloat(form.weight) * 0.453592; // in kg
       const age = parseFloat(form.age);
       const activityLevel = parseFloat(form.activityLevel);
-      let bmr = 0;
+      let calories = 0;
       
       if (form.gender === 'male') {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5;
+        calories = (10 * weight) + (6.25 * height) - (5 * age) + 5;
       } else if (form.gender === 'female') {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+        calories = (10 * weight) + (6.25 * height) - (5 * age) - 161;
       } else {
-        bmr = (10 * weight) + (6.25 * height) - (5 * age) - 78;
+        calories = (10 * weight) + (6.25 * height) - (5 * age) - 78;
       }
 
-      let finalBmr = (bmr * activityLevel).toFixed(0)
+      let finalCalories = (calories * activityLevel).toFixed(0)
       setResult([
-        `${finalBmr} cal  (basal metabolic rate)`,
-        `${finalBmr - 250} cal (mild deficit)`,
-        `${finalBmr - 500} cal (moderate deficit)`,
-        `${finalBmr - 1000} cal (aggressive deficit)`
+        `${finalCalories} cal  (basal metabolic rate)`,
+        `${finalCalories - 250} cal (mild deficit)`,
+        `${finalCalories - 500} cal (moderate deficit)`,
+        `${finalCalories - 1000} cal (aggressive deficit)`
       ]);
+      setProtein(`${(parseFloat(weight) * 0.8).toFixed(0)}g - ${(parseFloat(weight) * 1.2).toFixed(0)}g`);
       setShowResult(true);
     } catch (error) {
       console.error("Error:", error);
@@ -197,14 +199,34 @@ const Calculator = () => {
                     </div>
                   </div>
                 )}
-
-                <button type="submit">
-                  <div className="cta-button group">
-                    <div className="bg-circle" />
-                    <p className="text">
-                      {loading ? "Sending..." : "Calculate"}
-                    </p>
+                {showResult && protein && (
+                  <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
+                    <span className="block sm:inline font-semibold">
+                      protein intake: {protein}
+                    </span>
+                    <div className="text-xs mt-1 opacity-75">
+                      based on 0.8 - 1.2g per kg of body weight
+                    </div>
                   </div>
+                )}
+
+                <button 
+                  type="submit"
+                  className="relative overflow-hidden bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 animate-pulse hover:animate-none shadow-lg hover:shadow-xl"
+                  style={{ animationDuration: '3s' }}
+                  disabled={loading}
+                >
+                  <div className="relative z-10">
+                    {loading ? (
+                      <div className="flex items-center justify-center">
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        calculating...
+                      </div>
+                    ) : (
+                      "✨ calculate calories"
+                    )}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-10 transform -skew-x-12 -translate-x-full transition-transform duration-700 hover:translate-x-full"></div>
                 </button>
               </form>
             </div>
