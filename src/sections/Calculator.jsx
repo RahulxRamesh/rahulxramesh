@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import TitleHeader from "../components/TitleHeader";
 import styles from '../style';
+import {insertData} from '../utils/supabase-client';
 
 const Calculator = () => {
   const formRef = useRef(null);
@@ -21,7 +22,7 @@ const Calculator = () => {
   };
   
   const [result, setResult] = useState(null);
-  const [protein, setProtein] = useState(null);
+  const [macros, setMacros] = useState(null);
   
   const handleSubmit = async (e) => {
     console.log("Form data:", form);
@@ -50,7 +51,16 @@ const Calculator = () => {
         `${finalCalories - 500} cal (moderate deficit)`,
         `${finalCalories - 1000} cal (aggressive deficit)`
       ]);
-      setProtein(`${(parseFloat(weight) * 0.8).toFixed(0)}g - ${(parseFloat(weight) * 1.2).toFixed(0)}g`);
+
+      let proteinIntake = (weight * 0.8).toFixed(0) + "g - " + (weight * 1.2).toFixed(0) + "g";
+      let carbIntake = (finalCalories * 0.5 / 4).toFixed(0) + "g";
+      let sugarIntake = (finalCalories * 0.1 / 4).toFixed(0) + "g";
+      let fatIntake = (finalCalories * 0.3 / 9).toFixed(0) + "g";
+      let saturatedFatIntake = (finalCalories * 0.1 / 9).toFixed(0) + "g";
+      let fiberIntake = (weight * 0.014).toFixed(0) + "g";
+
+
+      setMacros([proteinIntake, carbIntake, sugarIntake, fatIntake, saturatedFatIntake, fiberIntake]);
       setShowResult(true);
     } catch (error) {
       console.error("Error:", error);
@@ -199,13 +209,60 @@ const Calculator = () => {
                     </div>
                   </div>
                 )}
-                {showResult && protein && (
+                {showResult && macros && (
                   <div className="bg-blue-100 border border-blue-400 text-blue-700 px-4 py-3 rounded">
-                    <span className="block sm:inline font-semibold">
-                      protein intake: {protein}
-                    </span>
-                    <div className="text-xs mt-1 opacity-75">
-                      based on 0.8 - 1.2g per kg of body weight
+                    <div className="flex flex-col gap-1">
+                      <span className="block font-semibold">
+                        protein intake: {macros[0]}
+                      </span>
+                      <div className="text-xs opacity-75">
+                        based on 0.8 - 1.2g per kg of body weight
+                      </div>
+                      <span className="block font-semibold">
+                        carbs: {macros[1]}
+                      </span>
+                      <span className="block font-semibold">
+                        sugars: {macros[2]}
+                      </span>
+                      <span className="block font-semibold">
+                        fats: {macros[3]}
+                      </span>
+                      <span className="block font-semibold">
+                        saturated fats: {macros[4]}
+                      </span>
+                      <span className="block font-semibold">
+                        fiber: {macros[5]}
+                      </span>
+                      <div className="text-xs opacity-75">
+                        based on 0.014g per 1000cal consumed
+                      </div>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        value={form.name || ""}
+                        onChange={handleChange}
+                        placeholder="name/username"
+                        className="w-full text-gray-500 bg-gray-200 rounded-lg px-3 py-2"
+                      />
+                      {(!form.name || form.name.trim() === "") && (
+                        <div className="text-xs text-red-500">
+                          Please enter your name first to save your stats
+                        </div>
+                      )}
+                      <button
+                        onClick={() => insertData({ username: form.name, macros: macros })} 
+                        type="button"
+                        style={{ pointerEvents: (!form.name || form.name.trim() === "") ? 'none' : 'auto' }}
+                        className={`mt-2 w-full border border-blue-400 px-4 py-3 rounded font-semibold transition-colors ${
+                          !form.name || form.name.trim() === ""
+                            ? "bg-gray-300 text-gray-500 opacity-50"
+                            : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                        }`}
+                      >
+                        💾 wanna save your stats?
+                      </button>
                     </div>
                   </div>
                 )}
