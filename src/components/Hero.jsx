@@ -11,8 +11,8 @@ const Hero = () => {
 
             <div className='flex flex-row items-center py-[10px] px-4 bg-discount-gradient rounded-[10px] mb-14 '>
               <p className={`${styles.tagline} ml-4`}>
-                  <span className='text-white'>Automation | QA | Release</span> ~Engineer 
-                  <span class="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span> <br></br>
+                  <span className='text-white'>Automation | QA | Release</span> Engineer 
+                  <span className="animate-ping ml-2 mb-4 inline-flex rounded-full h-2 w-2 bg-sky-500"></span> <br></br>
                   <span className='text-gradient text-white ss:text-[15px]'>[currently ➜ Telehealth]</span>
               </p>
             </div>

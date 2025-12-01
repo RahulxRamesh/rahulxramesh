@@ -4,6 +4,8 @@ import close from "./close.svg";
 import linkedin from "./linkedin.svg";
 import github from "./github.svg";
 import coffee from "./coffee.png";
+import macros from "./macros.png";
+import wip from "./wip.png";
 
 export {
   pfp,
@@ -11,5 +13,7 @@ export {
   close,
   linkedin,
   github,
-  coffee
+  coffee,
+  macros,
+  wip
 };

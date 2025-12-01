@@ -6,6 +6,12 @@ import {navLinks} from '../constants';
 const Navbar = () => {
 const [toggle, setToggle] = useState(false);
 
+const handleNavClick = (link) => {
+  if (link && (link.startsWith('http') || link.startsWith('https'))) {
+    window.open(link);
+  }
+};
+
   return (
     <nav className='w-full flex py-4 justify-between items-center navbar'>
 
@@ -17,10 +23,10 @@ const [toggle, setToggle] = useState(false);
                ${index === navLinks.length -1 ? 'mr-0' : 'mr-10'} 
                text-white`}>
 
-                <a href={`#${nav.id}`} onClick={() => window.open(nav.link)} >
+                <a href={`#${nav.id}`} onClick={() => handleNavClick(nav.link)} >
                   {nav.title}
                 </a>
-                <img src={nav.icon} onClick={() => window.open(nav.link)}/>
+                <img src={nav.icon} onClick={() => handleNavClick(nav.link)}/>
                 
 
 
@@ -44,10 +50,10 @@ const [toggle, setToggle] = useState(false);
                                  ${index === navLinks.length -1 ? 'mr-0' : 'mb-4'} 
                                  text-white`}>
 
-                      <a href={`#${nav.id}`} onClick={() => window.open(nav.link)}>
+                      <a href={`#${nav.id}`} onClick={() => handleNavClick(nav.link)}>
                           {nav.title}
                        </a>
-                       <img src={nav.icon} onClick={() => window.open(nav.link)}/>
+                       <img src={nav.icon} onClick={() => handleNavClick(nav.link)}/>
                         </li>
 
       ))}
