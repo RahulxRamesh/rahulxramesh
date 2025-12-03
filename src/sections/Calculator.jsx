@@ -57,7 +57,7 @@ const Calculator = () => {
       let sugarIntake = (finalCalories * 0.1 / 4).toFixed(0) + "g";
       let fatIntake = (finalCalories * 0.3 / 9).toFixed(0) + "g";
       let saturatedFatIntake = (finalCalories * 0.1 / 9).toFixed(0) + "g";
-      let fiberIntake = (weight * 0.014).toFixed(0) + "g";
+      let fiberIntake = (finalCalories * 0.014).toFixed(0) + "g";
 
 
       setMacros([proteinIntake, carbIntake, sugarIntake, fatIntake, saturatedFatIntake, fiberIntake]);
