@@ -1281,7 +1281,7 @@
     "@tiptap/extensions" "^3.6.2"
     "@tiptap/pm" "^3.6.2"
 
-"@tldraw/editor@4.2.0":
+"@tldraw/editor@^4.2.0", "@tldraw/editor@4.2.0":
   version "4.2.0"
   resolved "https://registry.npmjs.org/@tldraw/editor/-/editor-4.2.0.tgz"
   integrity sha512-YQfAxplnvUAZYlzursaH9lSItOh/I4XAyaRm/mfSExSF5UvypryefW+zeIWY5f/WvrP3jnHQmq93rbhyoped+g==
