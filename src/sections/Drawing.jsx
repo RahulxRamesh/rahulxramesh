@@ -2,6 +2,7 @@ import styles from '../style';
 import { Tldraw } from 'tldraw'
 import { useSyncDemo } from '@tldraw/sync'
 import 'tldraw/tldraw.css'
+const TLDRAW_LICENSE_KEY = import.meta.env.VITE_TLDRAW_LICENSE_KEY;
 
 const Drawing = () => {
   const store = useSyncDemo({ roomId: 'drawing-room' })
@@ -15,7 +16,7 @@ const Drawing = () => {
     
       <section id='drawing' className={`flex md:flex-row flex-col gap-6 md:gap-10 items-start ${styles.paddingProjectsY} ${styles.paddingX}`}>
            <div style={{ position: "relative", width: "100%", height: "40vh" }}>
-			<Tldraw persistenceKey="example" store={store} onMount={handleMount}  />
+			<Tldraw persistenceKey="example" store={store} onMount={handleMount} licenseKey={TLDRAW_LICENSE_KEY} />
 		    </div>
       </section>
   )
