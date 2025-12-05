@@ -1,10 +1,10 @@
-import styles from '../style';
 import { Tldraw } from 'tldraw'
+import '@tldraw/tldraw/tldraw.css';
 import { useSyncDemo } from '@tldraw/sync'
-import 'tldraw/tldraw.css'
-const TLDRAW_LICENSE_KEY = import.meta.env.VITE_TLDRAW_LICENSE_KEY;
+import styles from '../style';
 
 const Drawing = () => {
+  const TLDRAW_LICENSE_KEY = import.meta.env.VITE_TLDRAW_LICENSE_KEY;
   const store = useSyncDemo({ roomId: 'drawing-room' })
   const animals = ['Tiger', 'Lion', 'Eagle', 'Wolf', 'Bear', 'Fox', 'Hawk', 'Shark', 'Panther', 'Falcon', 'Cobra', 'Jaguar', 'Cheetah', 'Rhino', 'Elephant'];
   const username = animals[Math.floor(Math.random() * animals.length)];
