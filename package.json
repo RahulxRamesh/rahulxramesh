@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.80.0",
+    "@tldraw/editor": "^4.2.0",
     "@tldraw/sync": "^4.2.0",
     "animate.css": "^4.1.1",
     "express": "^5.1.0",
